@@ -16,7 +16,7 @@ import os
 import subprocess
 from collections import deque
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 class Scraper:
@@ -27,14 +27,12 @@ class Scraper:
 
         self.user_agents = [
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
-            "Mozilla/5.0 (X11; Linux x86_64)"
         ]
         
         self.MULLVAD_PATH = r"C:\Program Files\Mullvad VPN\resources\mullvad.exe"
         self.MULLVAD_LOCATIONS = ["qas", "atl", "bos", "chi", "dal", "den", "det", "hou", "lax",
                                 "txc", "mia", "nyc", "phx", "rag", "slc", "sjc", "sea", "uyk", "was"]
-        self.USED_LOCATIONS = deque(maxlen=5)
+        self.USED_LOCATIONS = deque(maxlen=10)
 
     def get_ip(self):
         try:
@@ -68,37 +66,31 @@ class Scraper:
             logger.error(f"Error switching Mullvad server: {e}")
             return False
     
-    def scrape_one_page(self, weapon, add_ons: list, retries=0):
-        page = self.base_url + self.items_dict[weapon] + ''.join([str(add_on) for add_on in add_ons])
-        logger.debug(f"Scraping page: {page}")
-        
-        headers = {"User-Agent": random.choice(self.user_agents)}  # Rotate user agents
-        response = self.session.get(page, headers=headers, )  # Use session
-        
+    def scrape_one_page(self, weapon, index, retries=0):
+        page = f"{self.base_url}{self.items_dict[weapon]}&sort_column=price&sort_dir=asc&start={(index-1)*10}&count=10"
+        logger.info(f"Scraping page: {page}")
+
+        headers = {"User-Agent": random.choice(self.user_agents)}
+        response = self.session.get(page, headers=headers)
+
         if response.status_code == 429:
-            if retries >= 10:  # Set a maximum number of retries
+            if retries >= 10:
                 logger.error("Maximum retries reached. Aborting.")
                 return None
-            
-            # Switch Mullvad location if request fails
-            switched = self.switch_mullvad_server()
 
-            if switched:
-                logger.info("Retrying get_last_page() after switching VPN location...")
-                return self.scrape_one_page(weapon, add_ons, retries + 1)  # Retry after switching location
-            
-            wait = random.uniform(10, 20) * (2 ** retries)  # Exponential backoff
-            logger.warning(f"Rate limited! Sleeping {wait} seconds before retry... (Retry {retries + 1})")
-            time.sleep(wait)  # Randomized backoff
-            return self.scrape_one_page(weapon, add_ons, retries + 1)  # Retry after waiting
+            logger.warning(f"Rate-limited. Retrying in 5 seconds...")
+            self.switch_mullvad_server()  # Switch VPN if rate-limited
+
+            return self.scrape_one_page(weapon, index, retries + 1)  
 
         soup = bs4.BeautifulSoup(response.text, "html.parser")
         return soup
 
+
     def get_last_page(self, weapon):
         # Use Selenium to load the first page
         page = self.base_url + self.items_dict[weapon] + f"#p{1}_price_asc"
-        logger.debug(f"Loading first page with Selenium: {page}")
+        logger.info(f"Loading first page with Selenium: {page}")
         options = webdriver.ChromeOptions()
         options.add_argument("--headless")  # Run in headless mode
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
@@ -153,7 +145,7 @@ class Scraper:
             if index == 1:
                 last_page = self.get_last_page(weapon)
         
-            soup = self.scrape_one_page(weapon, [f"#p{index}_price_asc"])
+            soup = self.scrape_one_page(weapon, index)
             
             yield soup
 
