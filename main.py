@@ -1,10 +1,5 @@
-import bs4 
-import requests
-import re
-import httpx
 from scraper import Scraper
 from temp import items_dict
-import json
 
 def main():
     #scrape for ak-47 listings
