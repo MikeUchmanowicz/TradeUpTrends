@@ -15,6 +15,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import os
 import subprocess
 from collections import deque
+from selenium.common.exceptions import TimeoutException
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -113,7 +114,10 @@ class Scraper:
                 return last
 
             return 1
-
+        except TimeoutException:
+            print("[ERROR] Timeout while waiting for the pagination element.")
+            driver.quit()
+            return None  # Exit early to prevent using `soup` without a value
         except Exception as e:
             logger.error(f"Failed to load page: {e}")
 
@@ -197,6 +201,8 @@ class Scraper:
     def clean_price(self, price):
         price = price.text.strip()
         price = price.split('\n')[1].strip() if '\n' in price else price
+        price = price.replace("$", "").replace(",", "")
+        price = float(price)
         return price
 
     def check_wear(self, name):
