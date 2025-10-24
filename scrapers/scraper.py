@@ -63,8 +63,9 @@ class Scraper:
                                  capture_output=True, text=True, check=True, timeout=30)
             logger.info(f"Connect Output: {result.stdout.strip()}")
             
-            logger.info(f"Waiting for VPN to stabilize...")
-            time.sleep(3)
+            timeout = 5
+            logger.info(f"Waiting {timeout} seconds for VPN to stabilize...")
+            time.sleep(timeout)
             
             current_ip = self.get_ip()
 

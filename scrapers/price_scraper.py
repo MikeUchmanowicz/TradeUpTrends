@@ -51,6 +51,16 @@ class PriceScraper(Scraper):
         logger.info(f"Loading first page with Selenium: {page}")
         options = webdriver.ChromeOptions()
         options.add_argument("--headless")  # Run in headless mode
+        options.add_argument("--log-level=3")  # Disable Chrome logs
+        options.add_argument("--disable-logging")
+        options.add_argument("--disable-dev-shm-usage")
+        # Speed optimizations
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-gpu")
+        options.add_argument("--disable-images")  # Don't load images
+        #options.add_argument("--disable-javascript")  # Disable JS if not needed
+        options.add_argument("--disable-plugins")
+        options.add_argument("--disable-extensions")
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
         soup = None
 
@@ -86,6 +96,14 @@ class PriceScraper(Scraper):
                     return last
             except:
                 pass
+            
+            # If we still can't find pagination, try switching VPN and retrying
+            logger.warning(f"Failed to get pagination for {weapon}, trying VPN switch...")
+            vpn_switched = self.switch_mullvad_server()
+            if vpn_switched:
+                logger.info(f"Retrying get_last_page() for {weapon} after VPN switch...")
+                return self.get_last_page(weapon)  # Retry after switching VPN
+            
             return 1  # Return default value on timeout
         except Exception as e:
             logger.error(f"Failed to load page: {e}")

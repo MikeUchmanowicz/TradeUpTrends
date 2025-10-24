@@ -9,6 +9,9 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# Disable WebDriver Manager logs
+logging.getLogger('WDM').setLevel(logging.WARNING)
+
 def main():
     url = "https://steamcommunity.com/market/"
     price_scraper = PriceScraper(url, items_dict)

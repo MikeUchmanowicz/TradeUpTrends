@@ -34,6 +34,15 @@ class Database:
 
     def create_items(self, weapon, items):
         logger.info(f"Creating {len(items)} items for {weapon}...")
+        
+        # Reconnect for each weapon to handle long-running tasks
+        self.conn = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="root",
+            database="tut"
+        )
+        self.cursor = self.conn.cursor()
 
         try:
             # Define SQL insert command
@@ -84,7 +93,7 @@ class Database:
         try:
             # Define SQL insert command
             command = """
-            INSERT IGNORE INTO collection_items (collection_id, weapon_name, skin_name, rarity)
+            INSERT IGNORE INTO collection_skins (collection_id, weapon_name, skin_name, rarity)
             VALUES (%s, %s, %s, %s)
             """
 
@@ -103,4 +112,11 @@ class Database:
         except Exception as e:
             logger.error(f"Error creating items for {collection_name}: {e}")
             self.conn.rollback()
+    
+    def close(self):
+        """Close the database connection."""
+        if self.cursor:
+            self.cursor.close()
+        if self.conn:
+            self.conn.close()
 
