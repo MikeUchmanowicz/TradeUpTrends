@@ -1,75 +1,29 @@
 import re
 import time
 import random
-import requests
 import bs4
-import json
 import logging
-import pprint
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import os
-import subprocess
-from collections import deque
 from selenium.common.exceptions import TimeoutException
+from scrapers.scraper import Scraper
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-class Scraper:
-    def __init__(self, url, items_dict):
-        self.base_url = url
-        self.items_dict = items_dict
-        self.session = requests.Session()
-
-        self.user_agents = [
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
-        ]
-        
-        self.MULLVAD_PATH = r"C:\Program Files\Mullvad VPN\resources\mullvad.exe"
-        self.MULLVAD_LOCATIONS = ["qas", "atl", "bos", "chi", "dal", "den", "det", "hou", "lax",
-                                "txc", "mia", "nyc", "phx", "rag", "slc", "sjc", "sea", "uyk", "was"]
-        self.USED_LOCATIONS = deque(maxlen=10)
-
-    def get_ip(self):
-        try:
-            response = self.session.get("https://api64.ipify.org?format=json")
-            return response.json().get("ip", "Unknown")
-        except:
-            return "Failed to fetch IP"
-
-    def switch_mullvad_server(self):
-        # Get a list of available locations (excluding last 5 used)
-        available_locations = [loc for loc in self.MULLVAD_LOCATIONS if loc not in self.USED_LOCATIONS]
-
-        # Pick a new location that hasn't been used recently
-        new_loc = random.choice(available_locations)
-        logger.info(f"Switching Mullvad VPN server to {new_loc}...")
-
-        try: 
-            # Set the Mullvad VPN location
-            result = subprocess.run([self.MULLVAD_PATH, "relay", "set", "location", "us", new_loc], capture_output=True, text=True, check=True)
-            logger.info(f"Relay Set Output: {result.stdout.strip()}")
-            # Connect to Mullvad VPN
-            result = subprocess.run([self.MULLVAD_PATH, "connect"], capture_output=True, text=True, check=True)
-            logger.info(f"Connect Output: {result.stdout.strip()}")
-            # Wait for VPN to stabilize
-            time.sleep(5)
-            logger.info(f"VPN switched to {new_loc}, recent history: {list(self.USED_LOCATIONS)}")
-            self.USED_LOCATIONS.append(new_loc)
-            return True
-
-        except Exception as e:
-            logger.error(f"Error switching Mullvad server: {e}")
-            return False
+class PriceScraper(Scraper):
     
-    def scrape_one_page(self, weapon, index, retries=0):
-        page = f"{self.base_url}{self.items_dict[weapon]}&sort_column=price&sort_dir=asc&start={(index-1)*10}&count=10"
-        logger.info(f"Scraping page: {page}")
+    def __init__(self, url, items_dict):
+        super().__init__(url)
+        self.items_dict = items_dict
+
+    def scrape_one_page(self, weapon, index, last_page, retries=0):
+        page = f"{self.base_url}{self.items_dict[weapon]}&appid=730&sort_column=price&sort_dir=asc&start={(index)*10}&count=10"
+        logger.info(f"Scraping {weapon} [{index}/{last_page}]: start={(index-1)*10}&count=10")
 
         headers = {"User-Agent": random.choice(self.user_agents)}
         response = self.session.get(page, headers=headers)
@@ -79,27 +33,31 @@ class Scraper:
                 logger.error("Maximum retries reached. Aborting.")
                 return None
 
-            logger.warning(f"Rate-limited. Retrying in 5 seconds...")
-            self.switch_mullvad_server()  # Switch VPN if rate-limited
+            logger.warning(f"Rate-limited. Attempting to switch VPN...")
 
-            return self.scrape_one_page(weapon, index, retries + 1)  
+            # Try to switch VPN, but continue even if it fails
+            vpn_switched = self.switch_mullvad_server()
+            if not vpn_switched:
+                logger.warning("VPN switch failed, continuing with current connection")
+
+            return self.scrape_one_page(weapon, index, last_page, retries + 1)  
 
         soup = bs4.BeautifulSoup(response.text, "html.parser")
         return soup
 
-
     def get_last_page(self, weapon):
         # Use Selenium to load the first page
-        page = self.base_url + self.items_dict[weapon] + f"#p{1}_price_asc"
+        page = f"{self.base_url}{self.items_dict[weapon]}&appid=730&sort_column=price&sort_dir=asc"
         logger.info(f"Loading first page with Selenium: {page}")
         options = webdriver.ChromeOptions()
         options.add_argument("--headless")  # Run in headless mode
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
+        soup = None
 
         try:
             driver.get(page)
             # Wait for pagination elements to appear
-            WebDriverWait(driver, 10).until(
+            WebDriverWait(driver, 30).until(
                 EC.presence_of_element_located((By.CLASS_NAME, 'market_paging_pagelink'))
             )
 
@@ -115,9 +73,20 @@ class Scraper:
 
             return 1
         except TimeoutException:
-            print("[ERROR] Timeout while waiting for the pagination element.")
-            driver.quit()
-            return None  # Exit early to prevent using `soup` without a value
+            logger.error("Timeout while waiting for the pagination element.")
+            # Try to get page count from page source anyway
+            try:
+                html = driver.page_source
+                soup = bs4.BeautifulSoup(html, "html.parser")
+                pagination = soup.find_all('span', class_='market_paging_pagelink')
+                if pagination:
+                    last_page = pagination[-1].text
+                    last = int(last_page)
+                    logger.info(f"Found {last} pages despite timeout")
+                    return last
+            except:
+                pass
+            return 1  # Return default value on timeout
         except Exception as e:
             logger.error(f"Failed to load page: {e}")
 
@@ -128,29 +97,28 @@ class Scraper:
                 return self.get_last_page(weapon)  # Retry after switching location
 
             return 1  # Return default if VPN switch also fails
-
         finally:
             driver.quit()
             
-            pagination = soup.find_all('span', class_='market_paging_pagelink')
-            if pagination:
-                last_page = pagination[-1].text
-                last = int(last_page)
-                return last
+            # Only try to access soup if it was successfully created
+            if soup:
+                pagination = soup.find_all('span', class_='market_paging_pagelink')
+                if pagination:
+                    last_page = pagination[-1].text
+                    last = int(last_page)
+                    return last
             
             return 1
 
     def scrape_all_pages(self, weapon):
-        index = 0
-        last_page = 2
-        while index < last_page:
-            index += 1
-
-            if index == 1:
-                last_page = self.get_last_page(weapon)
+        last_page = self.get_last_page(weapon)
+        logger.info(f"Starting to scrape {last_page} pages for {weapon}")
         
-            soup = self.scrape_one_page(weapon, index)
-            
+        for index in range(1, last_page + 1):
+            soup = self.scrape_one_page(weapon, index, last_page)
+            if soup is None:
+                logger.error(f"Failed to scrape page {index} for {weapon}")
+                continue
             yield soup
 
     def get_items(self, weapon):
@@ -169,16 +137,18 @@ class Scraper:
                 name, stat, souv, wear = self.clean_name(name)
                 price = self.clean_price(price)
                 
-                obj = {"name":name, "price": price, "stat": stat, "souv": souv, "wear": wear, "page": page_index, "item": item_index}
+                obj = {
+                    "name": name,
+                    "price": price,
+                    "stat": stat,
+                    "souv": souv,
+                    "wear": wear,
+                    "page": page_index,
+                    "item": item_index,
+                }
                 page_objs.append(obj)
                 
-            pprint.pprint(page_objs)
             all_objs.extend(page_objs)
-            
-            with open("items.json", "w") as f:
-                #append to file
-                obj = {f"{weapon}": all_objs}
-                json.dump(obj, f, indent=4)
             
         return all_objs
     
@@ -202,6 +172,8 @@ class Scraper:
         price = price.text.strip()
         price = price.split('\n')[1].strip() if '\n' in price else price
         price = price.replace("$", "").replace(",", "")
+        price = price.replace("usd", "")
+        price = price.replace("USD", "")
         price = float(price)
         return price
 
