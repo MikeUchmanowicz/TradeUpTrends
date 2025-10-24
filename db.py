@@ -51,9 +51,10 @@ class Database:
             VALUES (%s, %s, %s, %s, %s, %s)
             """
 
-            # Insert each scraped item
+            # Prepare all data for batch insert
+            data_to_insert = []
             for item in items:
-                self.cursor.execute(command, (
+                data_to_insert.append((
                     weapon,         # Weapon name
                     item["name"],   # Skin name
                     item["price"],  # Price
@@ -62,9 +63,10 @@ class Database:
                     item["souv"]    # Souvenir boolean
                 ))
 
-                self.conn.commit()
-                logger.info(f"Inserted {self.cursor.rowcount} rows for {weapon}.")
-                
+            # Batch insert all items at once
+            self.cursor.executemany(command, data_to_insert)
+            self.conn.commit()
+            logger.info(f"Inserted {self.cursor.rowcount} rows for {weapon}.")
         except Exception as e:
             logger.error(f"Error creating items for {weapon}: {e}")
             self.conn.rollback()

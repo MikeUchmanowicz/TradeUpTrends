@@ -3,9 +3,14 @@ import bs4
 import logging
 import random
 import time
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
+import warnings
+import undetected_chromedriver as uc
+
+# Disable all warnings
+warnings.filterwarnings("ignore")
+logging.getLogger('WDM').setLevel(logging.WARNING)
+logging.getLogger('selenium').setLevel(logging.WARNING)
+logging.getLogger('urllib3').setLevel(logging.WARNING)
 
 logger = logging.getLogger(__name__)
 
@@ -16,107 +21,253 @@ class CollectionScraper(Scraper):
     def get_collection_urls(self):
         """Scrape all collection URLs from the main collections page."""
         
-        # Use Selenium to bypass Cloudflare
-        options = webdriver.ChromeOptions()
-        # Remove headless mode to help bypass Cloudflare
-        # options.add_argument("--headless")
-        options.add_argument("--disable-blink-features=AutomationControlled")
-        options.add_argument("--disable-dev-shm-usage")
+        options = uc.ChromeOptions()
+        # Run in visible mode for manual solving
         options.add_argument("--no-sandbox")
-        options.add_argument("--disable-web-security")
-        options.add_argument("--disable-features=VizDisplayCompositor")
-        options.add_experimental_option("excludeSwitches", ["enable-automation"])
-        options.add_experimental_option('useAutomationExtension', False)
-        options.add_argument(f"user-agent={random.choice(self.user_agents)}")
+        options.add_argument("--disable-dev-shm-usage")
         
-        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
+        driver = uc.Chrome(options=options)
         
         try:
-            # Now visit the collections page
-            logger.info(f"Visiting URL: {self.base_url}")
-            driver.get(self.base_url)
+            logger.info("Opening browser to https://wiki.cs.money/collections")
+
             
-            # Wait for Cloudflare challenge to complete
-            logger.info("Waiting for Cloudflare challenge to complete...")
-            time.sleep(15)  # Wait for Cloudflare challenge
+            driver.get("https://wiki.cs.money/collections")
+            import time
+            time.sleep(15)
             
-            # Check if we're still on Cloudflare challenge page
-            current_url = driver.current_url
-            logger.info(f"Current URL after loading: {current_url}")
-            
-            # Wait for page to fully load after Cloudflare
-            time.sleep(5)
-            
-            # Get the page source after Cloudflare has processed
+            # Get the page source
             html = driver.page_source
             soup = bs4.BeautifulSoup(html, "html.parser")
             
-            
-            # Find all links that contain a collection name pattern
+            # Find collection links
             collection_links = soup.find_all('a', class_="blzuifkxmlnzwzwpwjzrrtwcse")
-            logger.info(f"Found {len(collection_links)} links containing '/collections/'")
-
+            logger.info(f"Found {len(collection_links)} collection links")
+            
+            # Process collections
             to_remove = [
-            'collection set overpass 2024',
-            'collection set community 34',
-            'collection set graphic design',
-            'collection set xpshop wpn 01',
-            'collection set realism camo',
+                'collection set overpass 2024',
+                'collection set community 34', 
+                'collection set graphic design',
+                'collection set xpshop wpn 01',
+                'collection set realism camo',
             ]
             
             to_adjust = {
-                "operation hydra" : "the operation hydra collection",
-                "the x ray collection" : "the x-ray collection",
+                "operation hydra": "the operation hydra collection",
+                "the x ray collection": "the x-ray collection",
             }
             
-            # Extract unique collection URLs
             collection_urls = {}
             for link in collection_links:
                 uri = link['href']
                 name = uri.replace('/collections/', '').replace('-', ' ').strip()
+                
                 if name not in to_remove:
                     if name in to_adjust:
                         name = to_adjust[name]
                         
                     url = "https://wiki.cs.money" + uri
                     collection_urls[name] = {'url': url, "skins": []}
-                    logger.info(f"Found collection URL: {url}")
-                
-            logger.info(f"Found {len(collection_urls)} unique collection URLs")
+                    logger.info(f"Found: {name}")
+            
+            logger.info(f"Successfully found {len(collection_urls)} collections!")
+            
+            # Save to JSON file
+            import json
+            with open("collection_urls.json", "w") as f:
+                json.dump(collection_urls, f, indent=2)
+            
+            logger.info("Saved collection URLs to collection_urls.json")
+            logger.info("You can now use this data in your main scraper!")
             
             return collection_urls
             
         except Exception as e:
-            logger.error(f"Error fetching collection URLs: {e}")
-            return []
+            logger.error(f"Error: {e}")
+            return {}
         finally:
             driver.quit()
+    
+    def get_collection_urls_with_driver(self):
+        """Scrape all collection URLs from the main collections page and return driver for reuse."""
+        
+        options = uc.ChromeOptions()
+        # Run in visible mode for manual solving
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        
+        driver = uc.Chrome(options=options)
+        
+        try:
+            logger.info("Opening browser to https://wiki.cs.money/collections")
+            
+            driver.get("https://wiki.cs.money/collections")
+            import time
+            time.sleep(15)
+            
+            # Get the page source
+            html = driver.page_source
+            soup = bs4.BeautifulSoup(html, "html.parser")
+            
+            # Save HTML for debugging
+            with open("collections_page.html", "w", encoding="utf-8") as f:
+                f.write(html)
+            logger.info("Saved page HTML to collections_page.html")
+            
+            # Find collection links
+            collection_links = soup.find_all('a', class_="blzuifkxmlnzwzwpwjzrrtwcse")
+            logger.info(f"Found {len(collection_links)} collection links")
+            
+            # Process collections
+            to_remove = [
+                'collection set overpass 2024',
+                'collection set community 34', 
+                'collection set graphic design',
+                'collection set xpshop wpn 01',
+                'collection set realism camo',
+            ]
+            
+            to_adjust = {
+                "operation hydra": "the operation hydra collection",
+                "the x ray collection": "the x-ray collection",
+            }
+            
+            collection_urls = {}
+            for link in collection_links:
+                uri = link['href']
+                name = uri.replace('/collections/', '').replace('-', ' ').strip()
+                
+                if name not in to_remove:
+                    if name in to_adjust:
+                        name = to_adjust[name]
+                        
+                    url = "https://wiki.cs.money" + uri
+                    collection_urls[name] = {'url': url, "skins": []}
+                    logger.info(f"Found: {name}")
+            
+            logger.info(f"Successfully found {len(collection_urls)} collections!")
+            
+            # Save to JSON file
+            import json
+            with open("collection_urls.json", "w") as f:
+                json.dump(collection_urls, f, indent=2)
+            
+            logger.info("Saved collection URLs to collection_urls.json")
+            logger.info("Reusing driver for individual collection pages...")
+            
+            return collection_urls, driver
+            
+        except Exception as e:
+            logger.error(f"Error: {e}")
+            driver.quit()
+            return {}, None
+    
+    def scrape_one_page_with_driver(self, driver, url):
+        """Scrape a single collection page using existing driver."""
+        logger.info(f"Scraping collection page: {url}")
+        
+        try:
+            driver.get(url)
+            import time
+            time.sleep(5)  # Shorter wait since we already solved Cloudflare
+            
+            # Get the page source
+            html = driver.page_source
+            soup = bs4.BeautifulSoup(html, "html.parser")
+            
+            logger.info(f"Successfully scraped page. Content length: {len(html)}")
+            return soup
+            
+        except Exception as e:
+            logger.error(f"Error scraping page {url}: {e}")
+            return None
             
     def scrape_one_page(self, url, retries=0):
         """Scrape a single collection page."""
         logger.info(f"Scraping collection page: {url}")
-        headers = {"User-Agent": random.choice(self.user_agents)}
-        response = self.session.get(url, headers=headers)
-
-        if response.status_code != 200:
-            logger.error(f"Failed to fetch collection page: {response.status_code}")
-            return None
         
-        soup = bs4.BeautifulSoup(response.text, "html.parser")
-        logger.info(f"Successfully scraped page. Content length: {len(response.text)}")
-        return soup
+        options = uc.ChromeOptions()
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        
+        driver = uc.Chrome(options=options)
+        
+        try:
+            driver.get(url)
+            import time
+            time.sleep(15)  # Give time to manually solve Cloudflare if needed
+            
+            # Get the page source
+            html = driver.page_source
+            soup = bs4.BeautifulSoup(html, "html.parser")
+            
+            logger.info(f"Successfully scraped page. Content length: {len(html)}")
+            return soup
+            
+        except Exception as e:
+            logger.error(f"Error scraping page {url}: {e}")
+            return None
+        finally:
+            driver.quit()
 
     def scrape_all_pages(self, ):
-        collections = self.get_collection_urls()
+        # Get collections and driver in one go
+        collections, driver = self.get_collection_urls_with_driver()
         logger.info(f"Found {len(collections)} collections to scrape")
 
-        for name, item in collections.items():
-            logger.info(f"Scraping collection: {name}")
-            soup = self.scrape_one_page(item['url'])
-            if soup:
-                yield soup
-            else:
-                logger.error(f"Failed to scrape collection: {name}")
+        # Load existing collections data if it exists
+        import json
+        import os
+        
+        existing_data = {}
+        if os.path.exists("collections_data.json"):
+            try:
+                with open("collections_data.json", "r") as f:
+                    existing_data = json.load(f)
+                logger.info(f"Loaded existing data for {len(existing_data)} collections")
+            except:
+                logger.info("Starting fresh - no existing data found")
+
+        try:
+            for name, item in collections.items():
+                # Skip if we already have this collection's data
+                if name in existing_data and existing_data[name].get('skins'):
+                    logger.info(f"Skipping {name} - already have data")
+                    continue
+                    
+                logger.info(f"Scraping collection: {name}")
+                soup = self.scrape_one_page_with_driver(driver, item['url'])
+                if soup:
+                    # Parse items from this collection
+                    items = self.parse_items(soup)
+                    
+                    # Save this collection's data
+                    if items:  # If we got any items
+                        # Get the first (and only) collection from items
+                        collection_name = list(items.keys())[0]
+                        collection_items = items[collection_name]
+                        
+                        collection_data = {
+                            'url': item['url'],
+                            'skins': collection_items
+                        }
+                        
+                        # Update existing data
+                        existing_data[name] = collection_data
+                        
+                        # Save to file
+                        with open("collections_data.json", "w") as f:
+                            json.dump(existing_data, f, indent=2)
+                        
+                        logger.info(f"Saved {len(collection_items)} items for {name}")
+                    
+                    yield soup
+                else:
+                    logger.error(f"Failed to scrape collection: {name}")
+        finally:
+            # Close the driver when done
+            driver.quit()
         
     def get_items(self, ):
         all_items = {}
@@ -174,5 +325,5 @@ class CollectionScraper(Scraper):
             except Exception as e:
                 logger.error(f"Error parsing item: {e}")
                 
-        logger.info(f"Successfully parsed {len(items)} items")
+        logger.info(f"Successfully parsed {len(items[collection_name])} items for {collection_name}")
         return items

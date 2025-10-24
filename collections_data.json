@@ -1,0 +1,1841 @@
+{
+  "the fever collection": {
+    "url": "https://wiki.cs.money/collections/the-fever-collection",
+    "skins": [
+      {
+        "collection_name": "The Fever Collection",
+        "weapon_name": "FAMAS",
+        "skin_name": "Bad Trip",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The Fever Collection",
+        "weapon_name": "AWP",
+        "skin_name": "Printstream",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Fever Collection",
+        "weapon_name": "UMP-45",
+        "skin_name": "K.O. Factory",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Fever Collection",
+        "weapon_name": "AK-47",
+        "skin_name": "Searing Rage",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Fever Collection",
+        "weapon_name": "Galil AR",
+        "skin_name": "Control",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Fever Collection",
+        "weapon_name": "Glock-18",
+        "skin_name": "Shinobu",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Fever Collection",
+        "weapon_name": "Nova",
+        "skin_name": "Rising Sun",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Fever Collection",
+        "weapon_name": "P90",
+        "skin_name": "Wave Breaker",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Fever Collection",
+        "weapon_name": "Desert Eagle",
+        "skin_name": "Serpent Strike",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Fever Collection",
+        "weapon_name": "MAG-7",
+        "skin_name": "Resupply",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Fever Collection",
+        "weapon_name": "MP9",
+        "skin_name": "Nexus",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Fever Collection",
+        "weapon_name": "SSG 08",
+        "skin_name": "Memorial",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Fever Collection",
+        "weapon_name": "XM1014",
+        "skin_name": "Mockingbird",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Fever Collection",
+        "weapon_name": "M4A4",
+        "skin_name": "Choppa",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Fever Collection",
+        "weapon_name": "P2000",
+        "skin_name": "Sure Grip",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Fever Collection",
+        "weapon_name": "USP-S",
+        "skin_name": "PC-GRN",
+        "rarity": "Industrial Grade"
+      }
+    ]
+  },
+  "the radiant collection": {
+    "url": "https://wiki.cs.money/collections/the-radiant-collection",
+    "skins": [
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "AK-47",
+        "skin_name": "Nouveau Rouge",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "M4A1-S",
+        "skin_name": "Glitched Paint",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "USP-S",
+        "skin_name": "Bleeding Edge",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "Glock-18",
+        "skin_name": "Coral Bloom",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "P250",
+        "skin_name": "Red Tide",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "AWP",
+        "skin_name": "Arsenic Spill",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "M4A1-S",
+        "skin_name": "Rose Hex",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "SSG 08",
+        "skin_name": "Blush Pour",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "MP9",
+        "skin_name": "Shredded",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "M4A4",
+        "skin_name": "Steel Work",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "Galil AR",
+        "skin_name": "O-Ranger",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "Tec-9",
+        "skin_name": "Citric Acid",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "FAMAS",
+        "skin_name": "Grey Ghost",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "P250",
+        "skin_name": "Sedimentary",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "SG 553",
+        "skin_name": "Basket Halftone",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "CZ75-Auto",
+        "skin_name": "Pink Pearl",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "MP7",
+        "skin_name": "Short Ochre",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "Dual Berettas",
+        "skin_name": "BorDeux",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "Five-SeveN",
+        "skin_name": "Autumn Thicket",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "G3SG1",
+        "skin_name": "Red Jasper",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "XM1014",
+        "skin_name": "Canvas Cloud",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "MAC-10",
+        "skin_name": "Bronzer",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "P90",
+        "skin_name": "Desert Halftone",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "SCAR-20",
+        "skin_name": "Short Ochre",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "MP9",
+        "skin_name": "Multi-Terrain",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "Nova",
+        "skin_name": "Marsh Grass",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Radiant Collection",
+        "weapon_name": "PP-Bizon",
+        "skin_name": "Wood Block Camo",
+        "rarity": "Consumer Grade"
+      }
+    ]
+  },
+  "the boreal collection": {
+    "url": "https://wiki.cs.money/collections/the-boreal-collection",
+    "skins": [
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "AWP",
+        "skin_name": "Green Energy",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "M4A4",
+        "skin_name": "Sheet Lightning",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "Glock-18",
+        "skin_name": "Glockingbird",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "AK-47",
+        "skin_name": "Wintergreen",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "USP-S",
+        "skin_name": "Tropical Breeze",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "XM1014",
+        "skin_name": "Copperflage",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "MAC-10",
+        "skin_name": "Poplar Thicket",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "MP5-SD",
+        "skin_name": "Gold Leaf",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "AK-47",
+        "skin_name": "VariCamo Grey",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "Dual Berettas",
+        "skin_name": "Polished Malachite",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "Tec-9",
+        "skin_name": "Garter-9",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "Galil AR",
+        "skin_name": "Acid Dart",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "P90",
+        "skin_name": "Mustard Gas",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "R8 Revolver",
+        "skin_name": "Leafhopper",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "SSG 08",
+        "skin_name": "Tiger Tear",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "P2000",
+        "skin_name": "Marsh",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "SSG 08",
+        "skin_name": "Green Ceramic",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "MP9",
+        "skin_name": "Pine",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "Tec-9",
+        "skin_name": "Raw Ceramic",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "FAMAS",
+        "skin_name": "Palm",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "P250",
+        "skin_name": "Copper Oxide",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "UMP-45",
+        "skin_name": "Green Swirl",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "AUG",
+        "skin_name": "Commando Company",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "M249",
+        "skin_name": "Sage Camo",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "MAG-7",
+        "skin_name": "Copper Oxide",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "G3SG1",
+        "skin_name": "Green Cell",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "Negev",
+        "skin_name": "Raw Ceramic",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Boreal Collection",
+        "weapon_name": "MAC-10",
+        "skin_name": "Acid Hex",
+        "rarity": "Industrial Grade"
+      }
+    ]
+  },
+  "the ascent collection": {
+    "url": "https://wiki.cs.money/collections/the-ascent-collection",
+    "skins": [
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "M4A1-S",
+        "skin_name": "Stratosphere",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "AK-47",
+        "skin_name": "Midnight Laminate",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "USP-S",
+        "skin_name": "Royal Guard",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "FAMAS",
+        "skin_name": "Yeti Camo",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "MP9",
+        "skin_name": "Cobalt Paisley",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "P2000",
+        "skin_name": "Royal Baroque",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "P90",
+        "skin_name": "Reef Grief",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "M4A4",
+        "skin_name": "Naval Shred Camo",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "Glock-18",
+        "skin_name": "Ocean Topo",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "Negev",
+        "skin_name": "Sour Grapes",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "Five-SeveN",
+        "skin_name": "Sky Blue",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "Galil AR",
+        "skin_name": "Robin's Egg",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "Dual Berettas",
+        "skin_name": "Rose Nacre",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "Nova",
+        "skin_name": "Turquoise Pour",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "XM1014",
+        "skin_name": "Gum Wall Camo",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "Tec-9",
+        "skin_name": "Blue Blast",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "MP9",
+        "skin_name": "Buff Blue",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "Galil AR",
+        "skin_name": "Grey Smoke",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "SG 553",
+        "skin_name": "Night Camo",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "P250",
+        "skin_name": "Plum Netting",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "R8 Revolver",
+        "skin_name": "Cobalt Grip",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "MP5-SD",
+        "skin_name": "Lime Hex",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "MAC-10",
+        "skin_name": "Storm Camo",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "P90",
+        "skin_name": "Blue Tac",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "Sawed-Off",
+        "skin_name": "Runoff",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Ascent Collection",
+        "weapon_name": "SSG 08",
+        "skin_name": "Grey Smoke",
+        "rarity": "Consumer Grade"
+      }
+    ]
+  },
+  "the train 2025 collection": {
+    "url": "https://wiki.cs.money/collections/the-train-2025-collection",
+    "skins": [
+      {
+        "collection_name": "The Train 2025 Collection",
+        "weapon_name": "AWP",
+        "skin_name": "LongDog",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Train 2025 Collection",
+        "weapon_name": "MP9",
+        "skin_name": "Latte Rush",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Train 2025 Collection",
+        "weapon_name": "M4A4",
+        "skin_name": "Hellish",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Train 2025 Collection",
+        "weapon_name": "MAC-10",
+        "skin_name": "Derailment",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Train 2025 Collection",
+        "weapon_name": "Tec-9",
+        "skin_name": "Whiteout",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Train 2025 Collection",
+        "weapon_name": "FAMAS",
+        "skin_name": "2A2F",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Train 2025 Collection",
+        "weapon_name": "UMP-45",
+        "skin_name": "Late Night Transit",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Train 2025 Collection",
+        "weapon_name": "XM1014",
+        "skin_name": "Run Run Run",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Train 2025 Collection",
+        "weapon_name": "AUG",
+        "skin_name": "Steel Sentinel",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Train 2025 Collection",
+        "weapon_name": "CZ75-Auto",
+        "skin_name": "Copper Fiber",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Train 2025 Collection",
+        "weapon_name": "Galil AR",
+        "skin_name": "Green Apple",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Train 2025 Collection",
+        "weapon_name": "Glock-18",
+        "skin_name": "Green Line",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Train 2025 Collection",
+        "weapon_name": "Nova",
+        "skin_name": "Rain Station",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Train 2025 Collection",
+        "weapon_name": "P250",
+        "skin_name": "Constructivist",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Train 2025 Collection",
+        "weapon_name": "P90",
+        "skin_name": "Straight Dimes",
+        "rarity": "Industrial Grade"
+      }
+    ]
+  },
+  "the kilowatt collection": {
+    "url": "https://wiki.cs.money/collections/the-kilowatt-collection",
+    "skins": [
+      {
+        "collection_name": "The Kilowatt Collection",
+        "weapon_name": "AK-47",
+        "skin_name": "Inheritance",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The Kilowatt Collection",
+        "weapon_name": "AWP",
+        "skin_name": "Chrome Cannon",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The Kilowatt Collection",
+        "weapon_name": "USP-S",
+        "skin_name": "Jawbreaker",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Kilowatt Collection",
+        "weapon_name": "M4A1-S",
+        "skin_name": "Black Lotus",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Kilowatt Collection",
+        "weapon_name": "Zeus x27",
+        "skin_name": "Olympus",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Kilowatt Collection",
+        "weapon_name": "M4A4",
+        "skin_name": "Etch Lord",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Kilowatt Collection",
+        "weapon_name": "MP7",
+        "skin_name": "Just Smile",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Kilowatt Collection",
+        "weapon_name": "Five-SeveN",
+        "skin_name": "Hybrid",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Kilowatt Collection",
+        "weapon_name": "Glock-18",
+        "skin_name": "Block-18",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Kilowatt Collection",
+        "weapon_name": "Sawed-Off",
+        "skin_name": "Analog Input",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Kilowatt Collection",
+        "weapon_name": "MAC-10",
+        "skin_name": "Light Box",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Kilowatt Collection",
+        "weapon_name": "Tec-9",
+        "skin_name": "Slag",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Kilowatt Collection",
+        "weapon_name": "SSG 08",
+        "skin_name": "Dezastre",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Kilowatt Collection",
+        "weapon_name": "XM1014",
+        "skin_name": "Irezumi",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Kilowatt Collection",
+        "weapon_name": "UMP-45",
+        "skin_name": "Motorized",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Kilowatt Collection",
+        "weapon_name": "Nova",
+        "skin_name": "Dark Sigil",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Kilowatt Collection",
+        "weapon_name": "Dual Berettas",
+        "skin_name": "Hideout",
+        "rarity": "Mil-Spec"
+      }
+    ]
+  },
+  "the anubis collection": {
+    "url": "https://wiki.cs.money/collections/the-anubis-collection",
+    "skins": [
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "M4A4",
+        "skin_name": "Eye of Horus",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "P250",
+        "skin_name": "Apep's Curse",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "FAMAS",
+        "skin_name": "Waters of Nephthys",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "Glock-18",
+        "skin_name": "Ramese's Reach",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "P90",
+        "skin_name": "ScaraB Rush",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "Nova",
+        "skin_name": "Sobek's Bite",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "AWP",
+        "skin_name": "Black Nile",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "AK-47",
+        "skin_name": "Steel Delta",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "Tec-9",
+        "skin_name": "Mummy's Rot",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "MAG-7",
+        "skin_name": "Copper Coated",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "M4A1-S",
+        "skin_name": "Mud-Spec",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "USP-S",
+        "skin_name": "Desert Tactical",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "MAC-10",
+        "skin_name": "Echoing Sands",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "SSG 08",
+        "skin_name": "Azure Glyph",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "MP7",
+        "skin_name": "Sunbaked",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "M249",
+        "skin_name": "Submerged",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "XM1014",
+        "skin_name": "Hieroglyph",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "R8 Revolver",
+        "skin_name": "Inlay",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The Anubis Collection",
+        "weapon_name": "AUG",
+        "skin_name": "Snake Pit",
+        "rarity": "Consumer Grade"
+      }
+    ]
+  },
+  "the revolution collection": {
+    "url": "https://wiki.cs.money/collections/the-revolution-collection",
+    "skins": [
+      {
+        "collection_name": "The Revolution Collection",
+        "weapon_name": "M4A4",
+        "skin_name": "Temukau",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The Revolution Collection",
+        "weapon_name": "AK-47",
+        "skin_name": "Head Shot",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The Revolution Collection",
+        "weapon_name": "P2000",
+        "skin_name": "Wicked Sick",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Revolution Collection",
+        "weapon_name": "AWP",
+        "skin_name": "Duality",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Revolution Collection",
+        "weapon_name": "M4A1-S",
+        "skin_name": "Emphorosaur-S",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Revolution Collection",
+        "weapon_name": "UMP-45",
+        "skin_name": "Wild Child",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Revolution Collection",
+        "weapon_name": "R8 Revolver",
+        "skin_name": "Banana Cannon",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Revolution Collection",
+        "weapon_name": "Glock-18",
+        "skin_name": "Umbral Rabbit",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Revolution Collection",
+        "weapon_name": "P90",
+        "skin_name": "Neoqueen",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Revolution Collection",
+        "weapon_name": "P250",
+        "skin_name": "Re.built",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Revolution Collection",
+        "weapon_name": "MAC-10",
+        "skin_name": "Sakkaku",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Revolution Collection",
+        "weapon_name": "MP5-SD",
+        "skin_name": "Liquidation",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Revolution Collection",
+        "weapon_name": "MP9",
+        "skin_name": "Featherweight",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Revolution Collection",
+        "weapon_name": "Tec-9",
+        "skin_name": "Rebel",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Revolution Collection",
+        "weapon_name": "MAG-7",
+        "skin_name": "Insomnia",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Revolution Collection",
+        "weapon_name": "SCAR-20",
+        "skin_name": "Fragments",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Revolution Collection",
+        "weapon_name": "SG 553",
+        "skin_name": "Cyberforce",
+        "rarity": "Mil-Spec"
+      }
+    ]
+  },
+  "the recoil collection": {
+    "url": "https://wiki.cs.money/collections/the-recoil-collection",
+    "skins": [
+      {
+        "collection_name": "The Recoil Collection",
+        "weapon_name": "USP-S",
+        "skin_name": "Printstream",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The Recoil Collection",
+        "weapon_name": "AWP",
+        "skin_name": "Chromatic Aberration",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The Recoil Collection",
+        "weapon_name": "AK-47",
+        "skin_name": "Ice Coaled",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Recoil Collection",
+        "weapon_name": "Sawed-Off",
+        "skin_name": "Kiss\u2665Love",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Recoil Collection",
+        "weapon_name": "P250",
+        "skin_name": "Visions",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Recoil Collection",
+        "weapon_name": "R8 Revolver",
+        "skin_name": "Crazy 8",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Recoil Collection",
+        "weapon_name": "Dual Berettas",
+        "skin_name": "Flora Carnivora",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Recoil Collection",
+        "weapon_name": "P90",
+        "skin_name": "Vent Rush",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Recoil Collection",
+        "weapon_name": "M249",
+        "skin_name": "Downtown",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Recoil Collection",
+        "weapon_name": "SG 553",
+        "skin_name": "Dragon Tech",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Recoil Collection",
+        "weapon_name": "M4A4",
+        "skin_name": "Poly Mag",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Recoil Collection",
+        "weapon_name": "Glock-18",
+        "skin_name": "Winterized",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Recoil Collection",
+        "weapon_name": "FAMAS",
+        "skin_name": "Meow 36",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Recoil Collection",
+        "weapon_name": "MAC-10",
+        "skin_name": "Monkeyflage",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Recoil Collection",
+        "weapon_name": "Negev",
+        "skin_name": "Drop Me",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Recoil Collection",
+        "weapon_name": "UMP-45",
+        "skin_name": "Roadblock",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Recoil Collection",
+        "weapon_name": "Galil AR",
+        "skin_name": "Destroyer",
+        "rarity": "Mil-Spec"
+      }
+    ]
+  },
+  "the dreams nightmares collection": {
+    "url": "https://wiki.cs.money/collections/the-dreams-nightmares-collection",
+    "skins": [
+      {
+        "collection_name": "The Dreams & Nightmares Collection",
+        "weapon_name": "AK-47",
+        "skin_name": "Nightwish",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The Dreams & Nightmares Collection",
+        "weapon_name": "MP9",
+        "skin_name": "Starlight Protector",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The Dreams & Nightmares Collection",
+        "weapon_name": "FAMAS",
+        "skin_name": "Rapid Eye Movement",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Dreams & Nightmares Collection",
+        "weapon_name": "MP7",
+        "skin_name": "Abyssal Apparition",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Dreams & Nightmares Collection",
+        "weapon_name": "Dual Berettas",
+        "skin_name": "Melondrama",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Dreams & Nightmares Collection",
+        "weapon_name": "M4A1-S",
+        "skin_name": "Night Terror",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Dreams & Nightmares Collection",
+        "weapon_name": "USP-S",
+        "skin_name": "Ticket to Hell",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Dreams & Nightmares Collection",
+        "weapon_name": "PP-Bizon",
+        "skin_name": "Space Cat",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Dreams & Nightmares Collection",
+        "weapon_name": "XM1014",
+        "skin_name": "Zombie Offensive",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Dreams & Nightmares Collection",
+        "weapon_name": "G3SG1",
+        "skin_name": "Dream Glade",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Dreams & Nightmares Collection",
+        "weapon_name": "Five-SeveN",
+        "skin_name": "Scrawl",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Dreams & Nightmares Collection",
+        "weapon_name": "MAC-10",
+        "skin_name": "Ensnared",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Dreams & Nightmares Collection",
+        "weapon_name": "Sawed-Off",
+        "skin_name": "Spirit Board",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Dreams & Nightmares Collection",
+        "weapon_name": "MP5-SD",
+        "skin_name": "Necro Jr.",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Dreams & Nightmares Collection",
+        "weapon_name": "P2000",
+        "skin_name": "Lifted Spirits",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Dreams & Nightmares Collection",
+        "weapon_name": "MAG-7",
+        "skin_name": "Foresight",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Dreams & Nightmares Collection",
+        "weapon_name": "SCAR-20",
+        "skin_name": "Poultrygeist",
+        "rarity": "Mil-Spec"
+      }
+    ]
+  },
+  "the 2021 mirage collection": {
+    "url": "https://wiki.cs.money/collections/the-2021-mirage-collection",
+    "skins": [
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "AWP",
+        "skin_name": "Desert Hydra",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "Desert Eagle",
+        "skin_name": "Fennec Fox",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "MP5-SD",
+        "skin_name": "Oxide Oasis",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "Glock-18",
+        "skin_name": "Pink DDPAT",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "XM1014",
+        "skin_name": "Elegant Vines",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "AUG",
+        "skin_name": "Sand Storm",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "USP-S",
+        "skin_name": "Purple DDPAT",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "MP9",
+        "skin_name": "Music Box",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "SG 553",
+        "skin_name": "Desert Blossom",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "M249",
+        "skin_name": "Humidor",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "Dual Berettas",
+        "skin_name": "Drift Wood",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "P90",
+        "skin_name": "Verdant Growth",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "FAMAS",
+        "skin_name": "CaliCamo",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "CZ75-Auto",
+        "skin_name": "Midnight Palm",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "PP-Bizon",
+        "skin_name": "Anolis",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "MAG-7",
+        "skin_name": "Navy Sheen",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "SSG 08",
+        "skin_name": "Prey",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "P250",
+        "skin_name": "Drought",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The 2021 Mirage Collection",
+        "weapon_name": "MAC-10",
+        "skin_name": "Sienna Damask",
+        "rarity": "Consumer Grade"
+      }
+    ]
+  },
+  "the 2021 train collection": {
+    "url": "https://wiki.cs.money/collections/the-2021-train-collection",
+    "skins": [
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "M4A4",
+        "skin_name": "The Coalition",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "Glock-18",
+        "skin_name": "Gamma Doppler Emerald",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "USP-S",
+        "skin_name": "Whiteout",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "Glock-18",
+        "skin_name": "Gamma Doppler Phase 3",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "Glock-18",
+        "skin_name": "Gamma Doppler Phase 1",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "Glock-18",
+        "skin_name": "Gamma Doppler Phase 2",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "Glock-18",
+        "skin_name": "Gamma Doppler Phase 4",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "MAC-10",
+        "skin_name": "Propaganda",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "FAMAS",
+        "skin_name": "Meltdown",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "AWP",
+        "skin_name": "POP AWP",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "MP5-SD",
+        "skin_name": "Autumn Twilly",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "CZ75-Auto",
+        "skin_name": "Syndicate",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "P2000",
+        "skin_name": "Space Race",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "Nova",
+        "skin_name": "Red Quartz",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "M4A1-S",
+        "skin_name": "Fizzy POP",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "Tec-9",
+        "skin_name": "Safety Net",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "Desert Eagle",
+        "skin_name": "Sputnik",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "AUG",
+        "skin_name": "Amber Fade",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "SSG 08",
+        "skin_name": "Spring Twilly",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "UMP-45",
+        "skin_name": "Full Stop",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The 2021 Train Collection",
+        "weapon_name": "R8 Revolver",
+        "skin_name": "Blaze",
+        "rarity": "Mil-Spec"
+      }
+    ]
+  },
+  "the 2021 vertigo collection": {
+    "url": "https://wiki.cs.money/collections/the-2021-vertigo-collection",
+    "skins": [
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "M4A1-S",
+        "skin_name": "Imminent Danger",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "Five-SeveN",
+        "skin_name": "Fall Hazard",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "SG 553",
+        "skin_name": "Hazard Pay",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "Galil AR",
+        "skin_name": "CAUTION!",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "AK-47",
+        "skin_name": "Green Laminate",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "P250",
+        "skin_name": "Digital Architect",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "MAG-7",
+        "skin_name": "Prism Terrace",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "P90",
+        "skin_name": "Schematic",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "Nova",
+        "skin_name": "Interlock",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "Negev",
+        "skin_name": "Infrastructure",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "Glock-18",
+        "skin_name": "Red Tire",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "PP-Bizon",
+        "skin_name": "Breaker Box",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "SSG 08",
+        "skin_name": "Carbon Fiber",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "UMP-45",
+        "skin_name": "Mechanism",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "CZ75-Auto",
+        "skin_name": "Framework",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "MAC-10",
+        "skin_name": "Strats",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "FAMAS",
+        "skin_name": "Faulty Wiring",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "XM1014",
+        "skin_name": "Blue Tire",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The 2021 Vertigo Collection",
+        "weapon_name": "Dual Berettas",
+        "skin_name": "Oil Change",
+        "rarity": "Consumer Grade"
+      }
+    ]
+  },
+  "the operation riptide collection": {
+    "url": "https://wiki.cs.money/collections/the-operation-riptide-collection",
+    "skins": [
+      {
+        "collection_name": "The Operation Riptide Collection",
+        "weapon_name": "AK-47",
+        "skin_name": "Leet Museo",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The Operation Riptide Collection",
+        "weapon_name": "Desert Eagle",
+        "skin_name": "Ocean Drive",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The Operation Riptide Collection",
+        "weapon_name": "Glock-18",
+        "skin_name": "Snack Attack",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Operation Riptide Collection",
+        "weapon_name": "M4A4",
+        "skin_name": "Spider Lily",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Operation Riptide Collection",
+        "weapon_name": "MAC-10",
+        "skin_name": "Toybox",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Operation Riptide Collection",
+        "weapon_name": "SSG 08",
+        "skin_name": "Turbo Peek",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The Operation Riptide Collection",
+        "weapon_name": "USP-S",
+        "skin_name": "Black Lotus",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Operation Riptide Collection",
+        "weapon_name": "FAMAS",
+        "skin_name": "ZX Spectron",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Operation Riptide Collection",
+        "weapon_name": "MP9",
+        "skin_name": "Mount Fuji",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Operation Riptide Collection",
+        "weapon_name": "Five-SeveN",
+        "skin_name": "Boost Protocol",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Operation Riptide Collection",
+        "weapon_name": "MAG-7",
+        "skin_name": "BI83 Spectrum",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The Operation Riptide Collection",
+        "weapon_name": "MP7",
+        "skin_name": "Guerrilla",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Operation Riptide Collection",
+        "weapon_name": "XM1014",
+        "skin_name": "Watchdog",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Operation Riptide Collection",
+        "weapon_name": "Dual Berettas",
+        "skin_name": "Tread",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Operation Riptide Collection",
+        "weapon_name": "PP-Bizon",
+        "skin_name": "Lumen",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Operation Riptide Collection",
+        "weapon_name": "G3SG1",
+        "skin_name": "Keeping Tabs",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The Operation Riptide Collection",
+        "weapon_name": "AUG",
+        "skin_name": "Plague",
+        "rarity": "Mil-Spec"
+      }
+    ]
+  },
+  "the 2021 dust 2 collection": {
+    "url": "https://wiki.cs.money/collections/the-2021-dust-2-collection",
+    "skins": [
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "AK-47",
+        "skin_name": "Gold Arabesque",
+        "rarity": "Covert"
+      },
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "SSG 08",
+        "skin_name": "Death Strike",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "UMP-45",
+        "skin_name": "Fade",
+        "rarity": "Classified"
+      },
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "M4A4",
+        "skin_name": "Red DDPAT",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "USP-S",
+        "skin_name": "Orange Anolis",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "MAC-10",
+        "skin_name": "Case Hardened",
+        "rarity": "Restricted"
+      },
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "Galil AR",
+        "skin_name": "Amber Fade",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "G3SG1",
+        "skin_name": "New Roots",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "Nova",
+        "skin_name": "Quick Sand",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "P250",
+        "skin_name": "Black & Tan",
+        "rarity": "Mil-Spec"
+      },
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "M249",
+        "skin_name": "Midnight Palm",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "Five-SeveN",
+        "skin_name": "Withered Vine",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "AUG",
+        "skin_name": "Spalted Wood",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "MP9",
+        "skin_name": "Old Roots",
+        "rarity": "Industrial Grade"
+      },
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "SG 553",
+        "skin_name": "Bleached",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "MP7",
+        "skin_name": "Prey",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "R8 Revolver",
+        "skin_name": "Desert Brush",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "P90",
+        "skin_name": "Desert DDPAT",
+        "rarity": "Consumer Grade"
+      },
+      {
+        "collection_name": "The 2021 Dust 2 Collection",
+        "weapon_name": "Sawed-Off",
+        "skin_name": "Parched",
+        "rarity": "Consumer Grade"
+      }
+    ]
+  }
+}

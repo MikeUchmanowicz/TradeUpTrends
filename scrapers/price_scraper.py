@@ -45,7 +45,7 @@ class PriceScraper(Scraper):
         soup = bs4.BeautifulSoup(response.text, "html.parser")
         return soup
 
-    def get_last_page(self, weapon):
+    def get_last_page(self, weapon, retries=0):
         # Use Selenium to load the first page
         page = f"{self.base_url}{self.items_dict[weapon]}&appid=730&sort_column=price&sort_dir=asc"
         logger.info(f"Loading first page with Selenium: {page}")
@@ -81,7 +81,15 @@ class PriceScraper(Scraper):
                 last = int(last_page)
                 return last
 
-            return 1
+            # If no pagination found, try VPN switch and retry
+            logger.warning(f"No pagination found for {weapon}, trying VPN switch... (attempt {retries + 1})")
+            vpn_switched = self.switch_mullvad_server()
+            if vpn_switched:
+                logger.info(f"Retrying get_last_page() for {weapon} after VPN switch...")
+                return self.get_last_page(weapon, retries + 1)
+            
+            logger.error(f"No pagination found for {weapon} after VPN switch, retrying...")
+            return self.get_last_page(weapon, retries + 1)
         except TimeoutException:
             logger.error("Timeout while waiting for the pagination element.")
             # Try to get page count from page source anyway
@@ -98,23 +106,26 @@ class PriceScraper(Scraper):
                 pass
             
             # If we still can't find pagination, try switching VPN and retrying
-            logger.warning(f"Failed to get pagination for {weapon}, trying VPN switch...")
+            logger.warning(f"Failed to get pagination for {weapon}, trying VPN switch... (attempt {retries + 1})")
             vpn_switched = self.switch_mullvad_server()
             if vpn_switched:
                 logger.info(f"Retrying get_last_page() for {weapon} after VPN switch...")
-                return self.get_last_page(weapon)  # Retry after switching VPN
+                return self.get_last_page(weapon, retries + 1)  # Retry after switching VPN
             
-            return 1  # Return default value on timeout
+            logger.error(f"Failed to get pagination for {weapon} after VPN switch, retrying...")
+            return self.get_last_page(weapon, retries + 1)  # Keep retrying
         except Exception as e:
             logger.error(f"Failed to load page: {e}")
 
             # Switch Mullvad location if request fails
+            logger.warning(f"Failed to load page for {weapon}, trying VPN switch... (attempt {retries + 1})")
             switched = self.switch_mullvad_server()
             if switched:
-                logger.info("Retrying get_last_page() after switching VPN location...")
-                return self.get_last_page(weapon)  # Retry after switching location
+                logger.info(f"Retrying get_last_page() after switching VPN location...")
+                return self.get_last_page(weapon, retries + 1)  # Retry after switching location
 
-            return 1  # Return default if VPN switch also fails
+            logger.error(f"Failed to load page for {weapon} after VPN switch, retrying...")
+            return self.get_last_page(weapon, retries + 1)  # Keep retrying
         finally:
             driver.quit()
             
