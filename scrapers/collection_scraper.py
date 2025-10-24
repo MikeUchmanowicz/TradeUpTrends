@@ -5,6 +5,7 @@ import random
 import time
 import warnings
 import undetected_chromedriver as uc
+import json
 
 # Disable all warnings
 warnings.filterwarnings("ignore")
@@ -72,15 +73,6 @@ class CollectionScraper(Scraper):
                     logger.info(f"Found: {name}")
             
             logger.info(f"Successfully found {len(collection_urls)} collections!")
-            
-            # Save to JSON file
-            import json
-            with open("collection_urls.json", "w") as f:
-                json.dump(collection_urls, f, indent=2)
-            
-            logger.info("Saved collection URLs to collection_urls.json")
-            logger.info("You can now use this data in your main scraper!")
-            
             return collection_urls
             
         except Exception as e:
@@ -147,13 +139,7 @@ class CollectionScraper(Scraper):
                     logger.info(f"Found: {name}")
             
             logger.info(f"Successfully found {len(collection_urls)} collections!")
-            
-            # Save to JSON file
-            import json
-            with open("collection_urls.json", "w") as f:
-                json.dump(collection_urls, f, indent=2)
-            
-            logger.info("Saved collection URLs to collection_urls.json")
+
             logger.info("Reusing driver for individual collection pages...")
             
             return collection_urls, driver
